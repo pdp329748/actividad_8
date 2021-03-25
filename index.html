@@ -6,6 +6,26 @@
 	<link href="styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+	<div id="container">
 	<h2>Actividad 8</h2>
+	<ul>
+		<li>Nombre: &nbsp</li>
+		<li>Sexo: &nbsp</li>
+	</ul>
+	<ul>
+		<li><input type="text" id="name"></li>
+		<li>
+			<select id="gender">
+				<option value="1">Femenino</option>
+				<option value="2">Masculino</option>
+			</select>
+		</li>
+	</ul>
+	<br><br>
+	<button onclick="alert(message(document.getElementById('name').value, document.getElementById('gender').value))">Enviar</button>
+	</div>
+	<script>
+		let message = (name, gender) => gender == 1 ? `Bienvenida, ${name}.` : `Bienvenido, ${name}.`;
+	</script>
 </body>
 </html>
